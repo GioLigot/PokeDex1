@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                                   ))
                           : const Center(
                               child: Text(
-                              'No Pokemons Found',
+                              'No Pokemons Found...',
                               style: TextStyle(
                                   fontSize: 25,
                                   fontFamily: "Outfit",
