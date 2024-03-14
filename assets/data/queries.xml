@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<queries name="createTable">
+		CREATE TABLE IF NOT EXISTS mons (
+		id INTEGER PRIMARY KEY,
+		name TEXT,
+		type TEXT,
+		description TEXT
+		);
+	</queries>
+
+	<queries name="addPokemon">
+		INSERT INTO mons (name, type, description) VALUES (?, ?, ?);
+	</queries>
+
+	<queries name="updatePokemon">
+		UPDATE mons SET name = ?, type = ?, description = ? WHERE name = ?;
+	</queries>
+
+	<queries name="deletePokemon">
+		DELETE FROM mons WHERE name = ?;
+	</queries>
+
+	<queries name="getAllPokemons">
+		SELECT* FROM mons order BY ID;
+	</queries>
+
+	<queries name="getPokemon">
+		SELECT* FROM mons WHERE LOWER(name) LIKE LOWER(?);
+	</queries>
+
+
+	<queries name = "clear">
+		DELETE FROM mons;
+	</queries>
+</root>
+
